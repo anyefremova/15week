@@ -59,24 +59,47 @@ console.log(animals);
 //Задание 9
 // Выведите символы в строке в консоль
 const str = 'Hello';
+for (i = 0; i < str.length; i++)
+    console.log(str[i]);
 
 //Задание 10
 // Выведите все элементы массива в консоль используя цикл for...of. Массив array объявлен в Задании 6
+for (let number of array) {
+    console.log(number);
+}
 
 //Задание 11
 // Выведите каждое слово из массива строк в консоль
 // Подсказка: вам понадобится метод массивов split
 const sentences = ['Hello, world!', 'How are you?'];
+for (let i = 0; i < sentences.length; i++) {
+    const wordsSentences = sentences[i].split(' ');
+    for (let i = 0; i < wordsSentences.length; i++) {
+        console.log(wordsSentences[i]);
+    }
+}
 
 //Задание 12
 // Выведите сумму всех элементов массива используя цикл for..of. Массив numbers объявлен в Задании 7
+let sum = 0;
+for (let element of numbers) {
+    sum += element;
+}
+console.log(sum);
 
 //Задание 13
-// Выведите длину каждого слова из массива строк в консоль
+// Выведите длину каждого слова из массива строк в консоль`
 const list = ['apple', 'banana', 'cherry'];
+for (let fruits of list)
+    console.log(fruits.length);
 
 //Задание 14
 // Преобразуйте массив каждый элемент массива words в верхний регистр
+const words = ['Hello', 'world', '!'];
+for (i = 0; i < words.length; i++) {
+    words[i] = words[i].toUpperCase();
+}
+console.log(words);
 
 //Задание 15
 // Подсчитайте количество гласных букв в строке
@@ -84,10 +107,13 @@ const list = ['apple', 'banana', 'cherry'];
 const greeting = 'Hello, world!';
 let vowelCount = 0;
 const vowels = ['a', 'e', 'i', 'o', 'u'];
+for (let letter of greeting) {
+
+}
 
 //Задание 16
 // Объедините все строки массива в одну строку с пробелами между ними
-const words = ['Hello', 'world', '!'];
+//const words = ['Hello', 'world', '!'];
 
 //Задание 17
 // Выведите числа от 1 до 10 в консоль используя цикл while
