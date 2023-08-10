@@ -107,35 +107,72 @@ console.log(words);
 const greeting = 'Hello, world!';
 let vowelCount = 0;
 const vowels = ['a', 'e', 'i', 'o', 'u'];
-for (let letter of greeting) {
-
+for (let char of greeting) {
+    if (vowels.includes(char)) {
+        vowelCount++;
+    }
 }
+console.log(vowelCount);
 
 //Задание 16
 // Объедините все строки массива в одну строку с пробелами между ними
 //const words = ['Hello', 'world', '!'];
+console.log(words.join(' '));
 
 //Задание 17
 // Выведите числа от 1 до 10 в консоль используя цикл while
+let numbers17 = 1;
+while (numbers17 <= 10) {
+    console.log(numbers17);
+    numbers17++;
+}
 
 //Задание 18
 // Выведите числа от 1 до 10 в консоль в обратном порядке используя цикл while
+let numbers18 = 10;
+while (numbers18 >= 1) {
+    console.log(numbers18);
+    numbers18--;
+}
 
 //Задание 19
 // Проверьте, все ли элементы массива являются положительными числами используя цикл while
 // Подсказка: используйте директиву break
 const allNumbers = [1, 2, 3, -4, 5];
 let allPositive = true;
+let number19 = 0;
+while (number19 < allNumbers.length) {
+    if (allNumbers[number19] <= 0) {
+        allPositive = false;
+        break;
+    }
+    number19++;
+}
+console.log(allPositive);
 
 //Задание 20
 // Выведите значения элементов массива до первого отрицательного числа используя цикл do...while
 const random = [2, 4, 6, -3, 8, 10];
+let number20 = 0;
+do {
+    console.log(random[number20]);
+    number20++;
+} while (number20 < random.length && random[number20] >= 0);
 
 //Задание 21
 // Выведите числа от 1 до 100, пропуская числа, которые делятся на 3 используя цикл do...while
+let numbers21 = 1;
+do {
+    if (numbers21 % 3 != 0) {
+        console.log(numbers21);
+    }
+    numbers21++;
+} while (numbers21 <= 100);
 
 //Задание 22
 // Запросить у пользователя числа, пока сумма введенных чисел не станет больше 100
+let numbers22 = 0;
+
 
 //Задание 23
 // Напишите функцию, которая изменит фоновый цвет всех элементов <h4> на странице на синий цвет
