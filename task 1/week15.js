@@ -171,14 +171,37 @@ do {
 
 //Задание 22
 // Запросить у пользователя числа, пока сумма введенных чисел не станет больше 100
-let numbers22 = 0;
-
+/*let sum22 = 0;
+do {
+    let input = prompt('Введите число: ');
+    let number22 = parseInt(input);
+    sum22 += number22;
+} while (sum22 <= 100);
+*/
 
 //Задание 23
 // Напишите функцию, которая изменит фоновый цвет всех элементов <h4> на странице на синий цвет
+function changeColour() {
+    const h4 = document.getElementsByTagName('h4');
+    for (let i = 0; i < h4.length; i++) {
+        h4[i].style.backgroundColor = 'blue';
+    }
+}
+
+changeColour()
 
 //Задание 24
 // Напишите генератор случайных строк до 6 символов
 // Подсказка: используйте методы объекта Math и длину массива alphabet
-let alphabet = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя';
-let randomString = '';
+function makeString() {
+    let alphabet = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя';
+    let randomString = '';
+    let counter = 0;
+    while (counter < 6) {
+        randomString += alphabet.charAt(Math.floor(Math.random() * alphabet.length))
+        counter += 1;
+    }
+    return randomString;
+}
+
+console.log(makeString());
